@@ -1,4 +1,4 @@
-package com.mybuilds.entity;
+package com.mybuilds.digitalwallet.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

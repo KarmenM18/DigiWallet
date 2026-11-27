@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mybuilds</groupId>
-	<artifactId>digitalwallet</artifactId>
+	<artifactId>digiwallet</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>digitalwallet</name>
+	<name>DigiWallet</name>
 	<description/>
 	<url/>
 	<licenses>

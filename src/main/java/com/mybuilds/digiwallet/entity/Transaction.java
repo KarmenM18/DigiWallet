@@ -1,25 +1,19 @@
-package com.mybuilds.digitalwallet.entity;
+package com.mybuilds.digiwallet.entity;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Transaction {
 
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long transactionNum;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "bank_id", nullable = false)
-    private Long bankID;
+    // @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "account_id", nullable = false)
+    private Account account;
 
     @Column(name = "description", nullable = false)
     private String description;
@@ -27,15 +21,20 @@ public class Transaction {
     @Column(name = "amount", nullable = false)
     private BigDecimal amount;
 
-    public Transaction(Long bankID, String description, BigDecimal amount) {
-        this.bankID = bankID;
+    public Transaction(Account account, String description, BigDecimal amount) {
+        this.account = account;
         this.description = description;
         this.amount = amount;
     }
 
-    // Getters and setters
-    public Long getBankdID() {
-        return this.bankID;
+    // Getters
+
+    public Long getTransactionNumLong() {
+        return this.transactionNum;
+    }
+
+    public Account getAccount() {
+        return this.account;
     }
 
     public String getDescription() {
@@ -44,6 +43,11 @@ public class Transaction {
 
     public BigDecimal getAmount() {
         return this.amount;
+    }
+
+    // Setters
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
     public void setDescription(String description) {

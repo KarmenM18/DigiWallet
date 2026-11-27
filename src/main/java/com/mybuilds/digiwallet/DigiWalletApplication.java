@@ -1,13 +1,13 @@
-package com.mybuilds.digitalwallet;
+package com.mybuilds.digiwallet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DigitalwalletApplication {
+public class DigiWalletApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DigitalwalletApplication.class, args);
+		SpringApplication.run(DigiWalletApplication.class, args);
 	}
 
 }

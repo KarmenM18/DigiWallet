@@ -1,4 +1,4 @@
-package com.mybuilds.digitalwallet.controllers;
+package com.mybuilds.digiwallet.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;

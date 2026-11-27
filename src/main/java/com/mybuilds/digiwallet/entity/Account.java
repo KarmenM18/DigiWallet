@@ -1,4 +1,4 @@
-package com.mybuilds.digitalwallet.entity;
+package com.mybuilds.digiwallet.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
